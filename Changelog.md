@@ -9,7 +9,7 @@ All notable changes to SoapsFloor.
 The first public release of SoapsFloor.
 
 **Room System**
-- Create rooms with the wand tool and WorldEdit schematics
+- Create rooms with the wand tool and WorldEdit/FAWE schematics
 - Edit existing rooms at any time
 - Per-room settings that override global defaults
 - Rooms save as individual YAML files
@@ -74,5 +74,5 @@ The first public release of SoapsFloor.
 **Server Compatibility**
 - Paper 1.21+
 - Java 21
-- WorldEdit integration (required)
+- WorldEdit / FAWE integration (FAWE recommended)
 - MythicMobs integration (optional)

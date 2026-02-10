@@ -6,7 +6,7 @@ Welcome to the official SoapsFloor wiki. Everything you need to set up, configur
 
 ### What is SoapsFloor?
 
-SoapsFloor is a vertical falling dungeon plugin for Paper 1.21+. Players drop through floors, fight mobs on each level, and try to survive all the way to the bottom. Build your own dungeon rooms using WorldEdit schematics, configure mobs per floor, and let your players compete for the fastest completion time.
+SoapsFloor is a vertical falling dungeon plugin for Paper 1.21+. Players drop through floors, fight mobs on each level, and try to survive all the way to the bottom. Build your own dungeon rooms using WorldEdit/FAWE schematics, configure mobs per floor, and let your players compete for the fastest completion time.
 
 ---
 
@@ -32,7 +32,7 @@ SoapsFloor is a vertical falling dungeon plugin for Paper 1.21+. Players drop th
 ### Requirements
 
 - **Paper** 1.21 or higher
-- **WorldEdit** (required for schematic pasting)
+- **WorldEdit / FAWE** (required for schematic pasting, FAWE recommended)
 - **MythicMobs** (optional, for custom mob support)
 - **Java 21**
 

@@ -1,6 +1,6 @@
 # Introduction
 
-SoapsFloor is a vertical dungeon plugin where players fall through progressively harder floors. You build the dungeon rooms using WorldEdit schematics, the plugin stacks them vertically, and players drop down floor by floor as they clear all the mobs on each level.
+SoapsFloor is a vertical dungeon plugin where players fall through progressively harder floors. You build the dungeon rooms using WorldEdit/FAWE schematics, the plugin stacks them vertically, and players drop down floor by floor as they clear all the mobs on each level.
 
 ---
 
@@ -22,7 +22,7 @@ Players who survive all floors win the dungeon and get teleported out. Their com
 ## Key Features
 
 **Room Building**
-- Build rooms visually using a wand tool and WorldEdit schematics
+- Build rooms visually using a wand tool and WorldEdit/FAWE schematics
 - Each floor can use a different schematic
 - One schematic can span multiple floors at once
 - Per-floor mob configuration (type, count, spread)
@@ -72,7 +72,7 @@ plugins/SoapsFloor/
   messages.yml        # All plugin messages (MiniMessage format)
   gui.yml             # GUI menu layouts and items
   rooms/              # Saved room data (one .yml per room)
-  schematics/         # WorldEdit .schem files go here
+  schematics/         # WorldEdit/FAWE .schem files go here
   data/               # Player stats (one .yml per player UUID)
 ```
 
@@ -82,7 +82,7 @@ plugins/SoapsFloor/
 
 | Plugin | Required? | Used For |
 |--------|-----------|----------|
-| WorldEdit | Yes | Schematic pasting for floor layouts |
+| WorldEdit / FAWE | Yes | Schematic pasting for floor layouts. FAWE is recommended. |
 | MythicMobs | No | Custom mob spawning on floors |
 
 ---

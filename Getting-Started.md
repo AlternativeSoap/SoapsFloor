@@ -8,7 +8,7 @@ This page walks you through installing SoapsFloor and creating your first dungeo
 
 1. Download the latest `SoapsFloor.jar`
 2. Place it in your server's `plugins/` folder
-3. Make sure **WorldEdit** is also installed
+3. Make sure **WorldEdit** or **FastAsyncWorldEdit (FAWE)** is installed. FAWE is recommended.
 4. Start (or restart) your server
 5. The plugin will generate its config files automatically
 
@@ -24,10 +24,15 @@ You should see this in your console:
 
 Before you can create a dungeon room, you need at least one floor schematic.
 
+We recommend using [FastAsyncWorldEdit (FAWE)](https://www.spigotmc.org/resources/fastasyncworldedit.13932/) instead of regular WorldEdit. FAWE is what the plugin is built and tested with, and it handles large schematics much better.
+
 1. Build a floor layout in your world (a flat platform with walls, obstacles, etc.)
 2. Select it with WorldEdit (`//wand`, left-click one corner, right-click the other)
-3. Save it: `//schem save my_floor`
-4. Copy the `.schem` file from `plugins/WorldEdit/schematics/` into `plugins/SoapsFloor/schematics/`
+3. Copy the selection: `//copy`
+4. Save it: `//schem save my_floor`
+5. Copy the `.schem` file from `plugins/FastAsyncWorldEdit/schematics/` (or `plugins/WorldEdit/schematics/` if using regular WorldEdit) into `plugins/SoapsFloor/schematics/`
+
+> You must `//copy` before `//schem save`, otherwise the schematic will be empty.
 
 > Each schematic represents one floor layout. Players will be dropped onto this platform and fight mobs there.
 
