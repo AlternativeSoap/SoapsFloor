@@ -20,18 +20,18 @@ SoapsFloor is a vertical falling dungeon plugin for Paper 1.21+. Players drop th
 
 | Page | Description |
 |------|-------------|
-| [Introduction](Introduction) | What this plugin does and how it works |
-| [Getting Started](Getting-Started) | Install the plugin and create your first room |
+| [Introduction](Introduction.md) | What this plugin does and how it works |
+| [Getting Started](Getting-Started.md) | Install the plugin and create your first room |
 | [Configuration](Configuration) | All settings in config.yml explained |
-| [Room Creation Guide](Room-Creation-Guide) | Step-by-step room building walkthrough |
-| [Gameplay Guide](Gameplay-Guide) | How a dungeon run works from start to finish |
-| [Mob System](Mob-System) | Mob spawning, per-floor settings, MythicMobs support |
-| [Falling Hazard](Falling-Hazard) | The descending particle hazard system |
-| [GUI Menus](GUI-Menus) | In-game menu system overview |
-| [Commands & Permissions](Commands-and-Permissions) | Every command, permission node, and default |
-| [Examples](Examples) | Example setups and use cases |
-| [Default Config Files](Default-Config-Files) | Full default config.yml, messages.yml, and gui.yml |
-| [Changelog](Changelog) | Version history |
+| [Room Creation Guide](Room-Creation-Guide.md) | Step-by-step room building walkthrough |
+| [Gameplay Guide](Gameplay-Guide.md) | How a dungeon run works from start to finish |
+| [Mob System](Mob-System.md) | Mob spawning, per-floor settings, MythicMobs support |
+| [Falling Hazard](Falling-Hazard.md) | The descending particle hazard system |
+| [GUI Menus](GUI-Menus.md) | In-game menu system overview |
+| [Commands & Permissions](Commands-and-Permissions.md) | Every command, permission node, and default |
+| [Examples](Examples.md) | Example setups and use cases |
+| [Default Config Files](Default-Config-Files.md) | Full default config.yml, messages.yml, and gui.yml |
+| [Changelog](Changelog.md) | Version history |
 
 ---
 
@@ -53,5 +53,6 @@ SoapsFloor is a vertical falling dungeon plugin for Paper 1.21+. Players drop th
 ---
 
 *Created by AlternativeSoap*
+
 
 
