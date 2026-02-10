@@ -119,6 +119,7 @@ anti-cheese:
   block-ender-pearls: true
   block-flying: true
   fall-damage-multiplier: 0.0
+  force-survival: true
   death-behavior: respawn
 ```
 
@@ -128,6 +129,7 @@ anti-cheese:
 | `block-ender-pearls` | `true` | Block ender pearl throwing inside rooms. |
 | `block-flying` | `true` | Block creative/spectator flying inside rooms. |
 | `fall-damage-multiplier` | `0.0` | Fall damage multiplier. `0.0` = no fall damage, `1.0` = normal damage. |
+| `force-survival` | `true` | Force survival mode when entering a room. Remembers the player's gamemode and restores it when the game ends. |
 | `death-behavior` | `respawn` | What happens when a player dies: `kick` (removed from room), `spectate` (spectator mode), or `respawn` (respawn on current floor). |
 
 ---
