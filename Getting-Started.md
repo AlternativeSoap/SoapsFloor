@@ -91,13 +91,15 @@ While in editor mode, your hotbar has adjustment tools:
 | Slot | Tool | What It Does |
 |------|------|-------------|
 | 1 | Room Setup Wand | Select positions |
-| 3 | How-To Guide Book | Reference guide |
+| 2 | Floor Selector | Switch between floors to configure them |
+| 3 | Mob Settings | Set mob type and count per floor |
 | 4 | Starter Gap Adjuster | Gap between starter room and floor 1 |
 | 5 | Floor Gap Adjuster | Gap between consecutive floors |
 | 6 | Max Players Adjuster | Set max players per session |
 | 7 | Countdown Adjuster | Set countdown timer duration |
-| 8 | Floor Selector | Switch between floors to configure them |
-| 9 | Mob Settings | Set mob type and count per floor |
+| 8 | Settings Info | Reference guide |
+| 9 | Custom Commands | Set commands to run per floor |
+| 10 | How-To Guide Book | Written book guide in main inventory |
 
 **Right-click** to increase a value, **left-click** to decrease it. Hold **shift** for larger increments.
 
@@ -147,3 +149,4 @@ To leave at any time:
 ---
 
 **Previous:** [Introduction](Introduction) | **Next:** [Configuration](Configuration)
+
