@@ -1,4 +1,4 @@
-# 🧼 SoapsFloor Wiki
+# SoapsFloor Wiki
 
 Welcome to the official SoapsFloor wiki. Everything you need to set up, configure, and run your own vertical dungeon on your Minecraft server.
 
@@ -47,3 +47,4 @@ SoapsFloor is a vertical falling dungeon plugin for Paper 1.21+. Players drop th
 ---
 
 *Created by AlternativeSoap*
+
