@@ -4,6 +4,27 @@ All notable changes to SoapsFloor.
 
 ---
 
+## v1.1.0 - Schematic Browser & Preview
+
+**Schematic Browser Standalone Mode**
+- New `/sf wand schematics` command to browse and paste schematics without an active wand session
+- Schematic browser now shows block dimensions (Size: WxHxL) on each schematic item
+- Permission: `soapsfloor.admin.wand.schematics`
+
+**Schematic Preview System**
+- Click a schematic in standalone mode to enter live preview mode
+- Ghost/holographic BlockDisplay preview follows your crosshair direction
+- Semi-transparent blocks (0.85 scale) with glowing outline and particle border
+- Scroll wheel adjusts preview distance (range: 3–50 blocks)
+- Action bar shows current distance and instructions
+- Type `done` in chat to paste, `cancel` to abort
+
+**Undo Paste**
+- After pasting a schematic, type `undo` in chat to revert and restore original blocks
+- Supports one level of undo per paste operation
+
+---
+
 ## v1.0.0 - Initial Release
 
 The first public release of SoapsFloor.
