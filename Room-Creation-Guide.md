@@ -259,6 +259,25 @@ This permanently deletes the room's config file. You cannot delete a room while 
 - Use the preview system (`enable-previews: true` in config) to see where floors will be placed before saving
 - Test your rooms after creating them to make sure gaps and spawn points feel right
 - You can always re-edit a room with `/sf wand edit <room_id>` to adjust settings later
+- Use `/sf wand schematics` to paste a starter room directly from SoapsFloor without needing WorldEdit/FAWE
+
+---
+
+## Pasting Schematics with the Schematic Browser
+
+You can paste any schematic from the `plugins/SoapsFloor/schematics/` folder directly in-world:
+
+1. Run `/sf wand schematics` (requires `soapsfloor.admin.wand.schematics`)
+2. The schematic browser GUI opens showing all available schematics with their dimensions
+3. Click a schematic to enter preview mode
+4. A ghost/holographic preview appears where you're looking
+5. Use your **scroll wheel** to push the preview farther away or bring it closer
+6. Move your crosshair to reposition the preview in 3D space
+7. When satisfied with placement, type **`done`** in chat to paste
+8. If you made a mistake, type **`undo`** in chat immediately after to revert
+9. Type **`cancel`** at any time during preview to abort
+
+This is especially useful for placing **starter rooms** — you can position them precisely before defining the room with the wand.
 
 ---
 
