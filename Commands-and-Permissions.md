@@ -39,6 +39,7 @@ All commands use the base `/sf` (alias: `/soapsfloor`).
 | `/sf wand settings toggle feedback` | Toggle editor feedback to chat or action bar |
 | `/sf wand settings toggle actionbar` | Toggle action bar hints |
 | `/sf wand settings toggle preview` | Toggle floor preview ghost blocks |
+| `/sf wand schematics` | Open schematic browser to preview & paste schematics |
 | `/sf room delete <room_id>` | Delete a room |
 
 ---
@@ -62,6 +63,7 @@ All commands use the base `/sf` (alias: `/soapsfloor`).
 | `soapsfloor.admin.wand.edit` | OP | Edit existing rooms |
 | `soapsfloor.admin.wand.remove` | OP | Remove rooms |
 | `soapsfloor.admin.wand.settings` | OP | Editor settings |
+| `soapsfloor.admin.wand.schematics` | OP | Browse and paste schematics |
 | `soapsfloor.admin.room.delete` | OP | Delete rooms |
 | `soapsfloor.admin.debug` | OP | Debug commands |
 | `soapsfloor.admin.gui` | OP | Admin control panel in GUI |
