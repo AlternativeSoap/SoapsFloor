@@ -104,9 +104,30 @@ Each entry shows the rank, player name, and value.
 
 ## Schematic Browser
 
-Used during room editing. Shows all available `.schem` files in `plugins/SoapsFloor/schematics/`.
+Used during room editing or as a standalone tool via `/sf wand schematics`. Shows all available `.schem` files in `plugins/SoapsFloor/schematics/`.
+
+Each schematic displays:
+- **Name** — The schematic file name
+- **Size** — Dimensions in blocks (e.g., `Size: 12x8x12 blocks`)
+
+### Editor Mode (during `/sf wand create` or `/sf wand edit`)
 
 Click a schematic to select it for a floor. After selecting, a floor count selector appears where you can choose how many floors to create with that schematic.
+
+### Standalone Mode (`/sf wand schematics`)
+
+Click a schematic to enter **preview mode**:
+
+1. The GUI closes and a ghost preview of the schematic appears in-world
+2. Ghost blocks are semi-transparent (scaled 0.85) with a glowing outline and particle border
+3. The preview follows your crosshair direction
+4. **Scroll wheel** — Adjusts the distance of the preview from you (range: 3–50 blocks)
+5. The action bar shows the current distance and instructions
+6. Type **`done`** in chat to paste the schematic at the preview location
+7. Type **`cancel`** in chat to abort without pasting
+8. Type **`undo`** in chat after pasting to revert the paste and restore original blocks
+
+This is useful for placing starter rooms or any schematic without needing WorldEdit/FAWE.
 
 ---
 
@@ -152,6 +173,8 @@ Placeholders in item names and lore are automatically replaced:
 | `{max_players}` | Room Browser | Max player count |
 | `{status}` | Room Browser | Room status |
 | `{best_time}` | Room Browser | Player's best time |
+| `{schematic}` | Schematic Browser | Schematic name |
+| `{size}` | Schematic Browser | Schematic dimensions (WxHxL) |
 | `{feedback_mode}` | Settings | Current feedback mode |
 | `{actionbar_state}` | Settings | Actionbar hints state |
 | `{preview_state}` | Settings | Preview state |
