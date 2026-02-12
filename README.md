@@ -48,11 +48,11 @@ SoapsFloor is a vertical falling dungeon plugin for Paper 1.21+. Players drop th
 
 - Website: [SoapsUniverse.com](https://www.soapsuniverse.com)
 - Discord: [discord.gg/mawAzwFq](https://discord.gg/mawAzwFq)
-- GitHub: [github.com/AlternativeSoap/SoapsTeleporter](https://github.com/AlternativeSoap/SoapsTeleporter)
 
 ---
 
 *Created by AlternativeSoap*
+
 
 
 
