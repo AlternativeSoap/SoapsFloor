@@ -57,7 +57,7 @@ A more advanced setup with different schematics and mob types per floor.
    open_arena 8-9
    boss_room 10
    ```
-3. Use the **Floor Selector** (slot 8) and **Mob Settings** (slot 9) to customize each floor:
+3. Use the **Floor Selector** and **Mob Settings** to customize each floor:
 
 | Floor | Mob Type | Min | Max |
 |-------|----------|-----|-----|
@@ -183,3 +183,4 @@ These per-room settings are saved in the room's YAML file and always override th
 ---
 
 **Previous:** [Commands & Permissions](Commands-and-Permissions) | **Next:** [Default Config Files](Default-Config-Files)
+
