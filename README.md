@@ -22,7 +22,7 @@ SoapsFloor is a vertical falling dungeon plugin for Paper 1.21+. Players drop th
 |------|-------------|
 | [Introduction](Introduction.md) | What this plugin does and how it works |
 | [Getting Started](Getting-Started.md) | Install the plugin and create your first room |
-| [Configuration](Configuration) | All settings in config.yml explained |
+| [Configuration](Configuration.md) | All settings in config.yml explained |
 | [Room Creation Guide](Room-Creation-Guide.md) | Step-by-step room building walkthrough |
 | [Gameplay Guide](Gameplay-Guide.md) | How a dungeon run works from start to finish |
 | [Mob System](Mob-System.md) | Mob spawning, per-floor settings, MythicMobs support |
@@ -52,6 +52,7 @@ SoapsFloor is a vertical falling dungeon plugin for Paper 1.21+. Players drop th
 ---
 
 *Created by AlternativeSoap*
+
 
 
 
