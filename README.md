@@ -31,7 +31,6 @@ SoapsFloor is a vertical falling dungeon plugin for Paper 1.21+. Players drop th
 | [Commands & Permissions](Commands-and-Permissions.md) | Every command, permission node, and default |
 | [Examples](Examples.md) | Example setups and use cases |
 | [Default Config Files](Default-Config-Files.md) | Full default config.yml, messages.yml, and gui.yml |
-| [Changelog](Changelog.md) | Version history |
 
 ---
 
@@ -52,6 +51,7 @@ SoapsFloor is a vertical falling dungeon plugin for Paper 1.21+. Players drop th
 ---
 
 *Created by AlternativeSoap*
+
 
 
 
