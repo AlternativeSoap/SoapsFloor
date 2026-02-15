@@ -14,6 +14,7 @@ mob-spawning:
   default-max-mobs: 8
   default-mob-type: VANILLA:ZOMBIE
   default-spread-radius: 3
+  spawn-delay-ticks: 0
   mob-counter-display: actionbar
 ```
 
@@ -23,6 +24,7 @@ mob-spawning:
 | `default-max-mobs` | Maximum mobs per floor |
 | `default-mob-type` | Default mob type for all floors |
 | `default-spread-radius` | Minimum distance (in blocks) between mob spawn points |
+| `spawn-delay-ticks` | Ticks between each mob spawn. `0` = instant (all at once). Set to `10` for 0.5s staggered spawns. |
 | `mob-counter-display` | How remaining mobs are shown: `actionbar`, `chat`, or `bossbar` |
 
 ---
@@ -97,6 +99,29 @@ When a floor starts, the plugin:
 
 ---
 
+## Multiple Mob Types Per Floor
+
+Each floor can have multiple mob types configured. During room creation:
+
+1. Select a floor using the **Floor Selector** (hotbar slot 8)
+2. Use the **Mob Settings** tool (hotbar slot 9)
+3. **Right-click** to open mob type selection
+4. Type a mob in chat (e.g., `vanilla:skeleton`)
+5. Right-click again to add another mob type to the same floor
+
+When the floor starts, the plugin picks from all configured mob types for that floor. Each mob that spawns is randomly selected from the floor's mob list.
+
+### Example
+
+A floor configured with:
+- `VANILLA:ZOMBIE`
+- `VANILLA:SKELETON`
+- `MYTHIC:FireDemon`
+
+Will spawn a mix of all three mob types, randomly distributed across the mob count.
+
+---
+
 ## Mob Counter Display
 
 While fighting mobs, players see how many are left. Configure the display method:
@@ -128,6 +153,19 @@ Mobs spawn at calculated positions within the floor's bounding box:
 
 ---
 
+## Spawn Delay
+
+By default, all mobs on a floor spawn instantly. You can stagger them with `spawn-delay-ticks`:
+
+```yaml
+mob-spawning:
+  spawn-delay-ticks: 10
+```
+
+With a value of `10`, mobs spawn one at a time with a 0.5-second delay between each. This creates a more dramatic entrance effect. Set to `0` for instant spawning (default).
+
+---
+
 ## Example Setup
 
 Here's an example of a 5-floor dungeon with increasing difficulty:
@@ -144,4 +182,4 @@ You can set all of this through the editor tools or by editing the room's YAML f
 
 ---
 
-**Previous:** [Gameplay Guide](Gameplay-Guide) | **Next:** [Falling Hazard](Falling-Hazard)
+**Previous:** [Gameplay Guide](Gameplay-Guide.md) | **Next:** [Falling Hazard](Falling-Hazard.md)
