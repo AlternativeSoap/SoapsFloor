@@ -57,7 +57,7 @@ A more advanced setup with different schematics and mob types per floor.
    open_arena 8-9
    boss_room 10
    ```
-3. Use the **Floor Selector** and **Mob Settings** to customize each floor:
+3. Use the **Floor Selector** (slot 8) and **Mob Settings** (slot 9) to customize each floor:
 
 | Floor | Mob Type | Min | Max |
 |-------|----------|-----|-----|
@@ -91,12 +91,13 @@ default-room-settings:
 ```yaml
 victory:
   reward-commands:
-    - "say {player} completed {room} in {time}!"
+    - "say {player} completed {room} in {time} with {kills} kills!"
     - "eco give {player} 500"
     - "crate givekey {player} dungeon_key 1"
+    - "xp add {player} 100 points"
 ```
 
-This gives players 500 coins and a crate key on victory.
+This gives players 500 coins, a crate key, and 100 XP points on victory. The `{kills}` and `{floors}` placeholders are also available for dynamic rewards.
 
 ---
 
@@ -182,5 +183,4 @@ These per-room settings are saved in the room's YAML file and always override th
 
 ---
 
-**Previous:** [Commands & Permissions](Commands-and-Permissions) | **Next:** [Default Config Files](Default-Config-Files)
-
+**Previous:** [Commands & Permissions](Commands-and-Permissions.md) | **Next:** [Default Config Files](Default-Config-Files.md)
