@@ -98,6 +98,8 @@ When the final floor is cleared:
   - Total mobs defeated
   - Player contributions (in multiplayer, each player's kill count and percentage)
   - Floors cleared
+- Victory title and subtitle display on screen (configurable)
+- Victory sound plays (configurable)
 - Victory particle effects play
 - Reward commands execute
 - Players are teleported to the exit point (or world spawn)
@@ -154,10 +156,14 @@ These prevent players from bypassing the dungeon challenge:
 |-----------|---------|--------------|
 | Disable Elytra | On | Prevents gliding between floors |
 | Block Ender Pearls | On | Prevents teleporting with pearls |
+| Block Chorus Fruit | On | Prevents random teleportation via chorus fruit |
 | Block Flying | On | Prevents creative/spectator flight |
 | No Fall Damage | On | `0.0` multiplier by default so floor drops don't kill players |
-| Block Breaking | On | Can't break blocks during a run |
-| Block Placing | On | Can't place blocks during a run |
+| Force Survival | On | Switches players to survival mode on join, restores gamemode on exit |
+| Remove Invisibility | On | Strips invisibility effect when entering a room |
+| Block Protection | On | Can't break, place, or interact with blocks during a run |
+| Blacklisted Items | On | Configurable list of items that can't be used inside rooms |
+| PvP | Off | Player-vs-player damage is disabled by default |
 
 Admins with `soapsfloor.admin` bypass all restrictions.
 
