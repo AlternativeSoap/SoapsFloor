@@ -27,6 +27,9 @@ Players who survive all floors win the dungeon and get teleported out. Their com
 - One schematic can span multiple floors at once
 - Per-floor mob configuration (type, count, spread)
 - Custom commands per floor (run any command when a floor starts)
+- Multi-mob per floor (mix different mob types on a single floor)
+- Wand selection particle preview (see your selected area in real-time)
+- Rename rooms with `/sf wand rename`
 
 **Gameplay**
 - Solo or multiplayer (configurable player limits)
@@ -36,6 +39,13 @@ Players who survive all floors win the dungeon and get teleported out. Their com
 - Configurable death behavior (kick, spectate, or respawn)
 - Floor drop particle and sound effects
 - Victory rewards via custom commands
+- Block protection (toggleable, prevents breaking/placing/explosions)
+- Chorus fruit blocking
+- PvP toggle
+- Invisibility removal on room join
+- Blacklisted items system
+- Victory title and subtitle display
+- Victory sound effects
 
 **Falling Hazard** (optional)
 - A descending plane of particles that falls from the ceiling
@@ -87,4 +97,4 @@ plugins/SoapsFloor/
 
 ---
 
-**Next:** [Getting Started](Getting-Started)
+**Next:** [Getting Started](Getting-Started.md)
