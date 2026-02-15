@@ -96,6 +96,7 @@ mob-spawning:
   default-max-mobs: 8
   default-mob-type: VANILLA:ZOMBIE
   default-spread-radius: 3
+  spawn-delay-ticks: 0
   mob-counter-display: actionbar
 ```
 
@@ -105,6 +106,7 @@ mob-spawning:
 | `default-max-mobs` | `8` | Maximum mobs to spawn per floor. |
 | `default-mob-type` | `VANILLA:ZOMBIE` | Default mob type. Use `VANILLA:<type>` or `MYTHIC:<id>`. |
 | `default-spread-radius` | `3` | Minimum blocks of space between mob spawn points. |
+| `spawn-delay-ticks` | `0` | Ticks between each mob spawn. `0` = all spawn instantly. Set to `10` for a 0.5s delay between each mob. |
 | `mob-counter-display` | `actionbar` | How remaining mobs are shown: `actionbar`, `chat`, or `bossbar`. |
 
 ---
@@ -117,20 +119,62 @@ Prevents players from cheating their way through floors. Admins with `soapsfloor
 anti-cheese:
   disable-elytra: true
   block-ender-pearls: true
+  block-chorus-fruit: true
   block-flying: true
   fall-damage-multiplier: 0.0
+  remove-invisibility-on-join: true
   force-survival: true
   death-behavior: respawn
+  blacklisted-items:
+    - ENDER_EYE
 ```
 
 | Option | Default | Description |
 |--------|---------|-------------|
 | `disable-elytra` | `true` | Prevent elytra use inside rooms. |
 | `block-ender-pearls` | `true` | Block ender pearl throwing inside rooms. |
+| `block-chorus-fruit` | `true` | Block Chorus Fruit random teleportation inside rooms. |
 | `block-flying` | `true` | Block creative/spectator flying inside rooms. |
 | `fall-damage-multiplier` | `0.0` | Fall damage multiplier. `0.0` = no fall damage, `1.0` = normal damage. |
+| `remove-invisibility-on-join` | `true` | Strip invisibility potion effect when entering a room. |
 | `force-survival` | `true` | Force survival mode when entering a room. Remembers the player's gamemode and restores it when the game ends. |
 | `death-behavior` | `respawn` | What happens when a player dies: `kick` (removed from room), `spectate` (spectator mode), or `respawn` (respawn on current floor). |
+| `blacklisted-items` | `[ENDER_EYE]` | Items that cannot be used inside dungeon rooms. Players cannot interact with, place, drop, or throw these items while in a session. Uses Bukkit Material names. |
+
+---
+
+## Block Protection
+
+Built-in block protection for dungeon rooms. Admins with `soapsfloor.bypass.protection` are exempt.
+
+```yaml
+block-protection:
+  enabled: true
+  prevent-block-break: true
+  prevent-block-place: true
+  prevent-explosions: true
+  prevent-bucket-use: true
+```
+
+| Option | Default | Description |
+|--------|---------|-------------|
+| `enabled` | `true` | Enable built-in block protection. |
+| `prevent-block-break` | `true` | Prevent breaking blocks inside rooms. |
+| `prevent-block-place` | `true` | Prevent placing blocks inside rooms. |
+| `prevent-explosions` | `true` | Block TNT, creeper, and other explosion damage inside rooms. |
+| `prevent-bucket-use` | `true` | Block bucket placement inside rooms. |
+
+---
+
+## PvP
+
+```yaml
+pvp-enabled: false
+```
+
+| Option | Default | Description |
+|--------|---------|-------------|
+| `pvp-enabled` | `false` | Allow player-vs-player damage inside dungeons. Mobs can still damage players regardless. |
 
 ---
 
@@ -166,6 +210,15 @@ See the [Falling Hazard](Falling-Hazard) page for a full breakdown of these sett
 ```yaml
 victory:
   teleport-to-spawn: true
+  title-enabled: true
+  title: "<gold><bold>DUNGEON CLEARED!</bold></gold>"
+  subtitle: "<gray>Completed in <white>{time}</white></gray>"
+  title-fade-in: 10
+  title-stay: 70
+  title-fade-out: 20
+  sound: ENTITY_PLAYER_LEVELUP
+  sound-volume: 1.0
+  sound-pitch: 1.0
   victory-particle: FIREWORK
   victory-particle-count: 100
   reward-commands:
@@ -175,9 +228,18 @@ victory:
 | Option | Default | Description |
 |--------|---------|-------------|
 | `teleport-to-spawn` | `true` | Teleport players to spawn after winning. If the room has an exit point, it uses that instead. |
+| `title-enabled` | `true` | Show a title and subtitle on screen when the dungeon is cleared. |
+| `title` | *see above* | Title text shown on victory. Supports MiniMessage. |
+| `subtitle` | *see above* | Subtitle text shown on victory. Supports MiniMessage. Placeholder: `{time}`. |
+| `title-fade-in` | `10` | Ticks for the title fade-in animation. |
+| `title-stay` | `70` | Ticks the title stays on screen. |
+| `title-fade-out` | `20` | Ticks for the title fade-out animation. |
+| `sound` | `ENTITY_PLAYER_LEVELUP` | Sound played on victory. |
+| `sound-volume` | `1.0` | Volume of the victory sound. |
+| `sound-pitch` | `1.0` | Pitch of the victory sound. |
 | `victory-particle` | `FIREWORK` | Particle effect on victory. Options: `FIREWORK`, `TOTEM_OF_UNDYING`, `EXPLOSION`, `DRAGON_BREATH`. |
 | `victory-particle-count` | `100` | Number of particles to spawn. |
-| `reward-commands` | *see above* | Commands to run on victory. Placeholders: `{player}`, `{room}`, `{time}`. |
+| `reward-commands` | *see above* | Commands to run on victory. Placeholders: `{player}`, `{room}`, `{time}`, `{kills}`, `{floors}`. |
 
 ### Floor Drop Effects
 
@@ -212,6 +274,10 @@ editor-mode:
   show-particle-borders: false
   particle-type: END_ROD
   particle-interval: 10
+  wand-selection:
+    show-particles: true
+    max-selection-volume: 100000
+    max-selection-dimension: 200
   restore-location: true
   restore-gamemode: true
   prevent-block-break: true
@@ -228,6 +294,9 @@ editor-mode:
 | `show-particle-borders` | `false` | Show particle borders around floor previews. |
 | `particle-type` | `END_ROD` | Particle type for borders. |
 | `particle-interval` | `10` | Ticks between particle updates. |
+| `wand-selection.show-particles` | `true` | Show a particle outline around the selected area when setting pos1/pos2. |
+| `wand-selection.max-selection-volume` | `100000` | Maximum total blocks allowed in a selection (W×H×L). |
+| `wand-selection.max-selection-dimension` | `200` | Maximum blocks per axis (width, height, or length). |
 | `restore-location` | `true` | Restore the player's location when leaving editor mode. |
 | `restore-gamemode` | `true` | Restore the player's gamemode when leaving editor mode. |
 | `prevent-block-break` | `true` | Prevent breaking blocks in editor mode. |
