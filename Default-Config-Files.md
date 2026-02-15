@@ -64,6 +64,7 @@ mob-spawning:
   default-max-mobs: 8
   default-mob-type: VANILLA:ZOMBIE
   default-spread-radius: 3
+  spawn-delay-ticks: 0
   mob-counter-display: actionbar
 
 
@@ -71,10 +72,28 @@ mob-spawning:
 anti-cheese:
   disable-elytra: true
   block-ender-pearls: true
+  block-chorus-fruit: true
   block-flying: true
   fall-damage-multiplier: 0.0
+  remove-invisibility-on-join: true
   force-survival: true
   death-behavior: respawn
+
+  blacklisted-items:
+    - ENDER_EYE
+
+
+# Block Protection
+block-protection:
+  enabled: true
+  prevent-block-break: true
+  prevent-block-place: true
+  prevent-explosions: true
+  prevent-bucket-use: true
+
+
+# PvP
+pvp-enabled: false
 
 
 # Falling Hazard
@@ -97,6 +116,15 @@ falling-hazard:
 # Victory
 victory:
   teleport-to-spawn: true
+  title-enabled: true
+  title: "<gold><bold>DUNGEON CLEARED!</bold></gold>"
+  subtitle: "<gray>Completed in <white>{time}</white></gray>"
+  title-fade-in: 10
+  title-stay: 70
+  title-fade-out: 20
+  sound: ENTITY_PLAYER_LEVELUP
+  sound-volume: 1.0
+  sound-pitch: 1.0
   victory-particle: FIREWORK
   victory-particle-count: 100
   reward-commands:
@@ -119,6 +147,10 @@ editor-mode:
   show-particle-borders: false
   particle-type: END_ROD
   particle-interval: 10
+  wand-selection:
+    show-particles: true
+    max-selection-volume: 100000
+    max-selection-dimension: 200
   restore-location: true
   restore-gamemode: true
   prevent-block-break: true
@@ -596,4 +628,4 @@ menus:
 
 ---
 
-**Previous:** [Examples](Examples) | **Next:** [Changelog](Changelog)
+**Previous:** [Examples](Examples.md) | **Next:** [Changelog](Changelog.md)
