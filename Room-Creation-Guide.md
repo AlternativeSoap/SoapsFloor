@@ -55,8 +55,12 @@ With the **Room Setup Wand** (slot 1):
 
 - **Right-click** a block to set **Position 1** (one corner)
 - **Left-click** a block to set **Position 2** (opposite corner)
+- **Shift + Left-click** to **deselect** both positions and start over
+- **Shift + Right-click** to reopen the **schematic browser** at any time during floor setup
 
 This defines the bounding box of the starter room. The floor of this area will be removed when the dungeon starts, dropping players to Floor 1.
+
+> When both positions are set, a particle outline shows the selected area in real-time so you can verify the selection visually.
 
 > Make sure the starter area is large enough for your max player count. The floor should be solid since it gets destroyed to drop players.
 
@@ -260,6 +264,9 @@ This permanently deletes the room's config file. You cannot delete a room while 
 - Test your rooms after creating them to make sure gaps and spawn points feel right
 - You can always re-edit a room with `/sf wand edit <room_id>` to adjust settings later
 - Use `/sf wand schematics` to paste a starter room directly from SoapsFloor without needing WorldEdit/FAWE
+- Use `Shift + Left-click` the wand to clear both positions without cancelling the session
+- Use `Shift + Right-click` to reopen the schematic browser during floor setup
+- You can rename a room with `/sf wand rename <room_id> <new_name>`
 
 ---
 
