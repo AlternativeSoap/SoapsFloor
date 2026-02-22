@@ -116,13 +116,14 @@ falling-hazard:
 # Victory
 victory:
   teleport-to-spawn: true
+  teleport-delay: 3
   title-enabled: true
   title: "<gold><bold>DUNGEON CLEARED!</bold></gold>"
   subtitle: "<gray>Completed in <white>{time}</white></gray>"
   title-fade-in: 10
   title-stay: 70
   title-fade-out: 20
-  sound: ENTITY_PLAYER_LEVELUP
+  sound: entity.player.levelup
   sound-volume: 1.0
   sound-pitch: 1.0
   victory-particle: FIREWORK
@@ -134,7 +135,7 @@ victory:
 floor-drop:
   particle-effect: EXPLOSION
   particle-count: 50
-  sound-effect: ENTITY_GENERIC_EXPLODE
+  sound-effect: entity.generic.explode
   sound-volume: 1.0
   sound-pitch: 0.8
 
@@ -623,6 +624,150 @@ menus:
 ```
 
 > This is a condensed version. The full file includes all border/background slots, lore text, and the floor-selector sub-view.
+
+</details>
+
+---
+
+## weaknesses.yml
+
+<details>
+<summary>Click to expand full weaknesses.yml</summary>
+
+```yaml
+# Weakness / Challenge Modifier System
+# Weaknesses are optional difficulty modifiers that
+# can be voted on before each dungeon run. Players who
+# complete a run under a weakness earn boosted rewards
+# based on the weakness multiplier.
+
+enabled: true
+
+voting:
+  duration: 15
+  options-count: 3
+  allow-no-weakness: true
+
+weaknesses:
+  no-sprint:
+    name: "<#ef4444>No Sprint"
+    description: "Players cannot sprint during the run"
+    icon: LEATHER_BOOTS
+    multiplier: 1.3
+    enabled: true
+
+  half-hearts:
+    name: "<#ef4444>Half Hearts"
+    description: "Maximum health reduced by 50%"
+    icon: GOLDEN_APPLE
+    multiplier: 1.5
+    enabled: true
+
+  blindness:
+    name: "<#ef4444>Blindness"
+    description: "Vision is severely limited"
+    icon: INK_SAC
+    multiplier: 1.4
+    enabled: true
+
+  slowness:
+    name: "<#ef4444>Slowness"
+    description: "Movement speed is reduced"
+    icon: SOUL_SAND
+    multiplier: 1.25
+    enabled: true
+
+  no-shield:
+    name: "<#ef4444>No Shield"
+    description: "Shields cannot be used"
+    icon: SHIELD
+    multiplier: 1.3
+    enabled: true
+
+  hunger-drain:
+    name: "<#ef4444>Hunger Drain"
+    description: "Hunger depletes continuously"
+    icon: ROTTEN_FLESH
+    multiplier: 1.2
+    enabled: true
+
+  glowing:
+    name: "<#ef4444>Glowing"
+    description: "Players glow and are visible through walls"
+    icon: GLOWSTONE_DUST
+    multiplier: 1.1
+    enabled: true
+
+  nausea:
+    name: "<#ef4444>Nausea"
+    description: "Vision warps and distorts"
+    icon: POISONOUS_POTATO
+    multiplier: 1.3
+    enabled: true
+
+  no-healing:
+    name: "<#ef4444>No Healing"
+    description: "Natural health regeneration is disabled"
+    icon: FERMENTED_SPIDER_EYE
+    multiplier: 1.5
+    enabled: true
+
+  mining-fatigue:
+    name: "<#ef4444>Mining Fatigue"
+    description: "Attack speed is greatly reduced"
+    icon: PRISMARINE_SHARD
+    multiplier: 1.2
+    enabled: true
+
+  weakness-effect:
+    name: "<#ef4444>Weakness"
+    description: "Melee damage is reduced"
+    icon: SPIDER_EYE
+    multiplier: 1.35
+    enabled: true
+
+  fragile-armor:
+    name: "<#ef4444>Fragile Armor"
+    description: "Armor takes double durability damage"
+    icon: CHAINMAIL_CHESTPLATE
+    multiplier: 1.25
+    enabled: true
+
+  no-jumping:
+    name: "<#ef4444>No Jumping"
+    description: "Players cannot jump during the run"
+    icon: RABBIT_FOOT
+    multiplier: 1.35
+    enabled: true
+
+  poison:
+    name: "<#ef4444>Lingering Poison"
+    description: "Constant poison drains health over time"
+    icon: SPIDER_EYE
+    multiplier: 1.5
+    enabled: true
+
+  darkness:
+    name: "<#ef4444>Darkness"
+    description: "Deep darkness limits visibility to a small radius"
+    icon: SCULK
+    multiplier: 1.45
+    enabled: true
+
+  short-reach:
+    name: "<#ef4444>Short Reach"
+    description: "Attack reach is reduced by 50%"
+    icon: STICK
+    multiplier: 1.3
+    enabled: true
+
+  heavy-gravity:
+    name: "<#ef4444>Heavy Gravity"
+    description: "Gravity is doubled — fall faster and jump lower"
+    icon: ANVIL
+    multiplier: 1.4
+    enabled: true
+```
 
 </details>
 
