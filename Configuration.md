@@ -203,6 +203,32 @@ See the [Falling Hazard](Falling-Hazard) page for a full breakdown of these sett
 
 ---
 
+## Weakness System
+
+The weakness/challenge modifier system is configured in a separate file: `plugins/SoapsFloor/weaknesses.yml`.
+
+Weaknesses are optional difficulty modifiers that players vote on before each dungeon run. Players who complete a run under a weakness earn boosted rewards based on the weakness multiplier.
+
+Key settings in `weaknesses.yml`:
+
+| Option | Default | Description |
+|--------|---------|-------------|
+| `enabled` | `true` | Master toggle for the entire weakness system. |
+| `voting.duration` | `15` | Seconds players have to vote. |
+| `voting.options-count` | `3` | Number of random weakness options presented each vote. |
+| `voting.allow-no-weakness` | `true` | Whether "No Weakness" is always available as a voting option. |
+
+There are 17 built-in weaknesses across four categories:
+
+- **Potion-based** — Blindness, Slowness, Glowing, Nausea, Mining Fatigue, Weakness, Poison, Darkness
+- **Attribute-based** — Half Hearts, No Jumping, Short Reach, Heavy Gravity
+- **Event-based** — No Sprint, No Shield, No Healing, Fragile Armor
+- **Task-based** — Hunger Drain
+
+Each weakness has a configurable `name`, `description`, `icon`, `multiplier`, and `enabled` toggle. See [Default Config Files](Default-Config-Files) for the full file.
+
+---
+
 ## Effects
 
 ### Victory Effects
@@ -210,13 +236,14 @@ See the [Falling Hazard](Falling-Hazard) page for a full breakdown of these sett
 ```yaml
 victory:
   teleport-to-spawn: true
+  teleport-delay: 3
   title-enabled: true
   title: "<gold><bold>DUNGEON CLEARED!</bold></gold>"
   subtitle: "<gray>Completed in <white>{time}</white></gray>"
   title-fade-in: 10
   title-stay: 70
   title-fade-out: 20
-  sound: ENTITY_PLAYER_LEVELUP
+  sound: entity.player.levelup
   sound-volume: 1.0
   sound-pitch: 1.0
   victory-particle: FIREWORK
@@ -228,13 +255,14 @@ victory:
 | Option | Default | Description |
 |--------|---------|-------------|
 | `teleport-to-spawn` | `true` | Teleport players to spawn after winning. If the room has an exit point, it uses that instead. |
+| `teleport-delay` | `3` | Seconds to wait after victory before teleporting players out. During this time players can enjoy the celebration effects. Set to `0` for instant teleport. |
 | `title-enabled` | `true` | Show a title and subtitle on screen when the dungeon is cleared. |
 | `title` | *see above* | Title text shown on victory. Supports MiniMessage. |
 | `subtitle` | *see above* | Subtitle text shown on victory. Supports MiniMessage. Placeholder: `{time}`. |
 | `title-fade-in` | `10` | Ticks for the title fade-in animation. |
 | `title-stay` | `70` | Ticks the title stays on screen. |
 | `title-fade-out` | `20` | Ticks for the title fade-out animation. |
-| `sound` | `ENTITY_PLAYER_LEVELUP` | Sound played on victory. |
+| `sound` | `entity.player.levelup` | Sound played on victory. Accepts Minecraft namespaced keys or Bukkit enum names. |
 | `sound-volume` | `1.0` | Volume of the victory sound. |
 | `sound-pitch` | `1.0` | Pitch of the victory sound. |
 | `victory-particle` | `FIREWORK` | Particle effect on victory. Options: `FIREWORK`, `TOTEM_OF_UNDYING`, `EXPLOSION`, `DRAGON_BREATH`. |
@@ -247,7 +275,7 @@ victory:
 floor-drop:
   particle-effect: EXPLOSION
   particle-count: 50
-  sound-effect: ENTITY_GENERIC_EXPLODE
+  sound-effect: entity.generic.explode
   sound-volume: 1.0
   sound-pitch: 0.8
 ```
@@ -256,7 +284,7 @@ floor-drop:
 |--------|---------|-------------|
 | `particle-effect` | `EXPLOSION` | Particle when a floor drops. Options: `EXPLOSION`, `CLOUD`, `LARGE_SMOKE`, `CAMPFIRE_COSY_SMOKE`. |
 | `particle-count` | `50` | Number of particles. |
-| `sound-effect` | `ENTITY_GENERIC_EXPLODE` | Sound played when a floor drops. |
+| `sound-effect` | `entity.generic.explode` | Sound played when a floor drops. Accepts Minecraft namespaced keys or Bukkit enum names. |
 | `sound-volume` | `1.0` | Volume. |
 | `sound-pitch` | `0.8` | Pitch. |
 
@@ -363,4 +391,4 @@ debug-mode:
 
 ---
 
-**Previous:** [Getting Started](Getting-Started) | **Next:** [Room Creation Guide](Room-Creation-Guide)
+**Previous:** [Getting Started](Getting-Started.md) | **Next:** [Room Creation Guide](Room-Creation-Guide.md)
