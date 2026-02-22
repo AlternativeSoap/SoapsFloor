@@ -36,7 +36,7 @@ A paginated list of all available rooms. Each room shows:
 - Room name
 - Number of floors
 - Current players / max players
-- Room status (waiting, in progress, etc.)
+- Room status (waiting, in progress, celebrating, etc.)
 - Your best time for that room
 
 Click any room to join it. Use the arrows at the bottom to navigate pages.
@@ -211,4 +211,4 @@ All features remain accessible through commands.
 
 ---
 
-**Previous:** [Falling Hazard](Falling-Hazard) | **Next:** [Commands & Permissions](Commands-and-Permissions)
+**Previous:** [Falling Hazard](Falling-Hazard.md) | **Next:** [Commands & Permissions](Commands-and-Permissions.md)
