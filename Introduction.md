@@ -39,6 +39,8 @@ Players who survive all floors win the dungeon and get teleported out. Their com
 - Configurable death behavior (kick, spectate, or respawn)
 - Floor drop particle and sound effects
 - Victory rewards via custom commands
+- Victory celebration delay (configurable pause before teleporting out)
+- Weakness/challenge modifier voting system (17 weaknesses with reward multipliers)
 - Block protection (toggleable, prevents breaking/placing/explosions)
 - Chorus fruit blocking
 - PvP toggle
@@ -58,12 +60,17 @@ Players who survive all floors win the dungeon and get teleported out. Their com
 - All stats persist across server restarts
 
 **GUI Menus**
-- Main hub menu with quick join, room browser, stats, settings
+- Fully config-driven GUI system — all menus defined in gui.yml
+- Bracket-format action system (`[open_menu]`, `[toggle]`, `[command]`, etc.)
+- Main hub menu with quick join, room browser, stats, settings, session status
 - Room browser with pagination
-- Leaderboard viewer per room
-- Admin control panel
-- Player settings menu
-- All fully customizable through gui.yml
+- Leaderboard viewer per room (time and kills tabs)
+- Admin control panel with permission gating
+- Player settings menu with toggle states
+- Per-item permissions (hide items from players without the permission)
+- Toggle active states (`material-active`, `name-active`, `lore-active`)
+- Global sound settings (open sound, click sound)
+- All fully customizable: slots, materials, names, lore, actions, permissions
 
 **MythicMobs Support**
 - Use vanilla mobs or MythicMobs on any floor
@@ -80,7 +87,9 @@ When installed, SoapsFloor creates this folder structure:
 plugins/SoapsFloor/
   config.yml          # Main configuration
   messages.yml        # All plugin messages (MiniMessage format)
-  gui.yml             # GUI menu layouts and items
+  gui.yml             # GUI menu layouts, items, actions, sounds, and permissions
+  weaknesses.yml      # Weakness/challenge modifier definitions
+  rewards.yml         # Reward configuration
   rooms/              # Saved room data (one .yml per room)
   schematics/         # WorldEdit/FAWE .schem files go here
   data/               # Player stats (one .yml per player UUID)
